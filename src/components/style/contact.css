@@ -1,0 +1,95 @@
+/* Contact Section Styling */
+.contact-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;  /* Align content towards the top */
+    align-items: center;
+    background-color: #f4f4f4;
+    padding: 0 20px;  /* Further reduced padding for tighter fit */
+    min-height: 100vh; /* Ensure it covers the full viewport height */
+  }
+  
+  .contact-section h2 {
+    font-size: 2.5em;
+    color: #004d99;
+    margin-bottom: 5px; /* Further reduced margin to push content up */
+  }
+  
+  .contact-section p {
+    font-size: 1.2em;
+    color: #333;
+    margin-bottom: 20px; /* Reduced margin further */
+    text-align: center;
+    max-width: 800px;
+  }
+  
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    max-width: 600px;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  .contact-form input,
+  .contact-form textarea {
+    padding: 15px;
+    font-size: 1em;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    resize: none;
+    transition: border-color 0.3s ease;
+  }
+  
+  .contact-form input:focus,
+  .contact-form textarea:focus {
+    border-color: #004d99;
+    outline: none;
+  }
+  
+  .contact-form input[type="submit"] {
+    background-color: #004d99;
+    color: #fff;
+    font-size: 1.2em;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .contact-form input[type="submit"]:hover {
+    background-color: #003366;
+  }
+  
+  .contact-form input::placeholder,
+  .contact-form textarea::placeholder {
+    color: #aaa;
+  }
+  
+  .contact-form .form-group {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* For Mobile and Tablet */
+  @media (max-width: 768px) {
+    .contact-form {
+      width: 100%;
+      padding: 20px;
+    }
+  
+    .contact-section h2 {
+      font-size: 2em;
+    }
+  
+    .contact-section p {
+      font-size: 1em;
+      max-width: 100%;
+    }
+  }
+  

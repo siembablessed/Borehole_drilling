@@ -1,0 +1,96 @@
+/* Gallery Section Styling */
+.gallery-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f9f9f9;
+    padding: 50px 20px;
+    text-align: center;
+  }
+  
+  .gallery-section h2 {
+    font-size: 2.5em;
+    color: #004d99;
+    margin-bottom: 30px;
+  }
+  
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Responsive grid */
+    gap: 20px;
+    max-width: 1200px;
+    width: 100%;
+  }
+  
+  .gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  /* Hover Effect for Gallery Item */
+  .gallery-item:hover {
+    transform: scale(1.05); /* Slight zoom effect on hover */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+  }
+  
+  /* Image Container */
+  .image-container {
+    position: relative;
+    height: 100%;
+  }
+  
+  /* Gallery Image Styling */
+  .image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+    border-radius: 8px;
+  }
+  
+  /* Image Hover Zoom */
+  .gallery-item:hover img {
+    transform: scale(1.1); /* Zoom in the image slightly on hover */
+  }
+  
+  /* Gallery Overlay Styling */
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);  /* Semi-transparent black background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    border-radius: 8px;
+  }
+  
+  .gallery-item:hover .overlay {
+    opacity: 1; /* Show the overlay on hover */
+  }
+  
+  /* Overlay Text Styling */
+  .overlay-text {
+    color: white;
+    font-size: 1.5em;
+    font-weight: bold;
+    text-align: center;
+  }
+  
+  @media (max-width: 768px) {
+    .gallery-section h2 {
+      font-size: 2em;
+    }
+  
+    .gallery-grid {
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Adjust grid for smaller screens */
+    }
+  }
+  
