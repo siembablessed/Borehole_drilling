@@ -14,7 +14,7 @@ function Header() {
       <div className="container">
         <div className="logo">
           <Link to="/" onClick={() => setIsOpen(false)}>
-            <h1>Premier Works</h1>
+            <h1>Global Investments (Pvt) Ltd</h1>
           </Link>
         </div>
 

@@ -11,7 +11,7 @@ body {
   max-width: 1200px; /* Adjust as needed */
   margin: 0 20px; /* Adds a minimum of 20px space on left and right */
   padding: 0 2em; /* Extra padding for content inside the container */
-  gap: 500px;
+  gap: 300px;
 }
 
 

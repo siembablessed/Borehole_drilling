@@ -7,6 +7,8 @@
     background-color: #f4f4f4;
     padding: 0 20px;  /* Further reduced padding for tighter fit */
     min-height: 100vh; /* Ensure it covers the full viewport height */
+    margin-top: 40px;
+
   }
   
   .contact-section h2 {
