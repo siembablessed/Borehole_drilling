@@ -18,17 +18,21 @@ function Header() {
           </Link>
         </div>
 
-        <button className="hamburger" onClick={toggleMenu}>
+        {/* Hamburger Menu */}
+        <button className={`hamburger ${isOpen ? 'hidden' : ''}`} onClick={toggleMenu}>
           <span className="bar"></span>
           <span className="bar"></span>
           <span className="bar"></span>
         </button>
 
+        {/* Navigation Links */}
         <nav className={`nav-links ${isOpen ? 'open' : ''}`}>
           <Link to="/about" onClick={() => setIsOpen(false)}>About Us</Link>
           <Link to="/services" onClick={() => setIsOpen(false)}>Services</Link>
           <Link to="/gallery" onClick={() => setIsOpen(false)}>Gallery</Link>
           <Link to="/contact" onClick={() => setIsOpen(false)}>Contact Us</Link>
+          {/* Close button for mobile view */}
+          {isOpen && <button className="close-button" onClick={toggleMenu}>✕</button>}
         </nav>
       </div>
     </header>

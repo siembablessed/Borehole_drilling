@@ -1,6 +1,9 @@
 import React from 'react';
 import './style/about.css';
-import AboutImage from './images/pexels-drector-16227438.jpg';  // Update with actual image path
+import AboutImage from './images/pexels-drector-16227438.jpg';
+import Ava from './images/Handsome-Dark-Brown-Skin-Juvenile-Boy-In-Disney-Pixar-Style-44843003-1-1 (1).png'; 
+import Ava2 from './images/images.jpeg'; 
+
 
 function About() {
   return (
@@ -46,17 +49,17 @@ function About() {
         <h2>Meet Our Team</h2>
         <div className="team">
           <div className="team-member card">
-            <img src="../images/cartoon-avatar1.png" alt="Team Member" />
-            <h4>John Doe</h4>
+            <img src={Ava} alt="Team Member" />
+            <h4>Simba Blessed</h4>
             <p>CEO & Founder</p>
           </div>
           <div className="team-member card">
-            <img src="../images/cartoon-avatar2.png" alt="Team Member" />
+            <img src={Ava} alt="Team Member" />
             <h4>Jane Smith</h4>
             <p>Lead Engineer</p>
           </div>
           <div className="team-member card">
-            <img src="../images/cartoon-avatar3.png" alt="Team Member" />
+            <img src={Ava} alt="Team Member" />
             <h4>Michael Brown</h4>
             <p>Operations Manager</p>
           </div>
