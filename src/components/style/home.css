@@ -1,202 +1,324 @@
 /* General Styling */
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Navbar Styling */
+.navbar {
+  background-color: #004d99;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.navbar .logo {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #fff;
+  text-decoration: none;
+}
+
+.navbar .nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+.navbar .nav-links a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.1em;
+  padding: 5px 10px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.navbar .nav-links a:hover {
+  background-color: #003366;
+}
+
+/* Carousel and Button Styling */
+.hero-carousel {
+  position: relative;
+  width: 100%;
+  max-height: calc(100vh - 60px);
+  overflow: hidden;
+}
+
+.carousel-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  max-height: calc(100vh - 60px);
+}
+
+.carousel-caption {
+  position: absolute;
+  bottom: 20%;
+  left: 10%;
+  color: #fff;
+  text-align: left;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 1.5em;
+  border-radius: 8px;
+  max-width: 500px;
+}
+
+.carousel-caption h2 {
+  font-size: 2em;
+  margin: 0;
+}
+
+.carousel-caption p {
+  font-size: 1.2em;
+  margin: 0.5em 0;
+}
+
+/* CTA Button Styling */
+.cta-button {
+  display: inline-block;
+  margin-top: 1em;
+  padding: 0.8em 1.5em;
+  font-size: 1em;
+  font-weight: bold;
+  color: #004d99;
+  background-color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #004d99;
+  color: #fff;
+}
+
+/* About Section Styling */
+.about-section {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 50px 0;
+  padding: 20px;
+  justify-content: space-between;
+}
+
+.about-section .branding {
+  flex: 1;
+  max-width: 48%;
+  padding: 10px;
+}
+
+.about-section .about-text {
+  flex: 1;
+  max-width: 48%;
+  padding: 10px;
+}
+
+.about-section img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.about-section .about-text h2 {
+  font-size: 2em;
+  color: #004d99;
+}
+
+.about-section .about-text p {
+  font-size: 1.2em;
+  margin: 1em 0;
+}
+
+/* Mission & Vision Section */
+.mission-vision {
+  text-align: center;
+  padding: 60px 20px;
+  background: linear-gradient(135deg, #004d99, #006bb3);
+  color: #fff;
+}
+
+.mission-vision h2 {
+  font-size: 2.5em;
+  margin-bottom: 30px;
+  font-weight: bold;
+}
+
+.mission-vision-content {
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.mission-vision .mission,
+.mission-vision .vision {
+  max-width: 400px;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  border-radius: 12px;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.mission-vision .mission:hover,
+.mission-vision .vision:hover {
+  transform: scale(1.05);
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.mission-vision h3 {
+  font-size: 1.8em;
+  margin-top: 15px;
+}
+
+.mission-vision p {
+  font-size: 1.1em;
+  margin-top: 10px;
+}
+
+.mission-vision{
+  .mission-vision-content{
+    .mission{
+      img{
+        width: 400px;
+      }
+    }
+    .vision{
+      img{
+        width: 400px;
+      }
+    }
+  }
+}
+
+/* Supporting Mission & Vision Image Gallery */
+.image-gallery {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.image-gallery h2 {
+  font-size: 2.5em;
+  color: #004d99;
+  margin-bottom: 30px;
+  font-weight: bold;
+}
+
+.gallery-grid {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.gallery-item {
+  position: relative;
+  max-width: 200px; /* Limit the maximum width of each gallery item */
+  max-height: 150px; /* Limit the maximum height */
+  overflow: hidden;
+  border-radius: 12px;
+  transition: transform 0.3s ease;
+}
+
+.gallery-item img {
+  width: 400px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.1);
+}
+
+.gallery-item .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  font-size: 1.3em;
+  font-weight: bold;
+  transition: opacity 0.3s ease;
+}
+
+.gallery-item:hover .overlay {
+  opacity: 1;
+}
+
+/* Responsive Design for Mission, Vision, and Gallery */
+@media (max-width: 768px) {
+  .mission-vision-content,
+  .gallery-grid {
+      flex-direction: column;
+      align-items: center;
   }
   
-  /* Navbar Styling */
-  .navbar {
-    background-color: #004d99;
-    padding: 15px 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: sticky;
-    top: 0;
-    z-index: 100;
-  }
-  
-  .navbar .logo {
-    font-size: 1.5em;
-    font-weight: bold;
-    color: #fff;
-    text-decoration: none;
-  }
-  
-  .navbar .nav-links {
-    display: flex;
-    gap: 20px;
-  }
-  
-  .navbar .nav-links a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 1.1em;
-    padding: 5px 10px;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-  }
-  
-  .navbar .nav-links a:hover {
-    background-color: #003366;
-  }
-  
-  /* Carousel and Button Styling */
-  .hero-carousel {
-    position: relative;
-    width: 100%;
-    max-height: calc(100vh - 60px); /* Adjust for navbar height */
-    overflow: hidden;
-  }
-  
-  .carousel-slide img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    max-height: calc(100vh - 60px); /* Limit height to fit within view */
-  }
-  
-  .carousel-caption {
-    position: absolute;
-    bottom: 20%;
-    left: 10%;
-    color: #fff;
-    text-align: left;
-    background: rgba(0, 0, 0, 0.6);
-    padding: 1.5em;
-    border-radius: 8px;
-    max-width: 500px;
+  .gallery-item {
+      width: 200px; /* Smaller image width for mobile */
+      height: 150px; /* Smaller image height for mobile */
   }
   
   .carousel-caption h2 {
-    font-size: 2em;
-    margin: 0;
-  }
-  
-  .carousel-caption p {
-    font-size: 1.2em;
-    margin: 0.5em 0;
-  }
-  
-  /* CTA Button Styling */
-  .cta-button {
-    display: inline-block;
-    margin-top: 1em;
-    padding: 0.8em 1.5em;
-    font-size: 1em;
-    font-weight: bold;
-    color: #004d99;
-    background-color: #fff;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s ease, color 0.3s ease;
-  }
-  
-  .cta-button:hover {
-    background-color: #004d99;
-    color: #fff;
-  }
-  
-  /* About Section Styling */
-.about-section {
-    display: flex;
-    flex-wrap: wrap;
-    margin: 50px 0;
-    padding: 20px;
-    justify-content: space-between;
-  }
-  
-  .about-section .branding {
-    flex: 1;
-    max-width: 48%;  /* Adjust the width to allow some space for text */
-    padding: 10px;
-  }
-  
-  .about-section .about-text {
-    flex: 1;
-    max-width: 48%;  /* Adjust the width to allow some space for branding */
-    padding: 10px;
-  }
-  
-  .about-section img {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-  }
-  
-  .about-section .about-text h2 {
-    font-size: 2em;
-    color: #004d99;
-  }
-  
-  .about-section .about-text p {
-    font-size: 1.2em;
-    margin: 1em 0;
-  }
-  
-  /* For Mobile and Tablet */
-  @media (max-width: 768px) {
-    .about-section {
-      flex-direction: column;
-      text-align: center;
-    }
-  
-    .about-section .branding, .about-section .about-text {
-      max-width: 100%;
-    }
-  
-    .carousel-caption h2 {
       font-size: 1.5em;
-    }
-  
-    .carousel-caption p {
+  }
+
+  .carousel-caption p {
       font-size: 1em;
-    }
   }
-  
-  
-  /* Footer Styling */
-  footer {
-    background-color: #004d99;
-    color: #fff;
-    text-align: center;
-    padding: 20px;
-    margin-top: 50px;
-  }
-  
-  footer a {
-    color: #fff;
-    text-decoration: none;
-  }
-  
-  /* Scrollbar Styling */
+}
+
+/* Footer Styling */
+footer {
+  background-color: #004d99;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  margin-top: 50px;
+}
+
+footer a {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Scrollbar Styling */
 ::-webkit-scrollbar {
-    width: 8px;
-    height: 8px;
+  width: 8px;
+  height: 8px;
 }
 
 ::-webkit-scrollbar-track {
-    background: transparent; /* Transparent track to blend with background */
+  background: transparent;
 }
 
 ::-webkit-scrollbar-thumb {
-    background-color: rgba(0, 0, 0, 0.2); /* Material UI-like thumb color */
-    border-radius: 4px; /* Rounded edges for a soft look */
-    transition: background-color 0.3s ease; /* Smooth color transition */
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background-color: rgba(0, 0, 0, 0.4); /* Darker color on hover */
+  background-color: rgba(0, 0, 0, 0.4);
 }
 
-/* Auto-hide scrollbar */
 body {
-    overflow: overlay; /* Allows scrollbar to overlay content */
+  overflow: overlay;
 }
 
-/* Hide scrollbar in Firefox */
 body {
-    scrollbar-width: thin;
-    scrollbar-color: rgba(0, 0, 0, 0.2) transparent;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(0, 0, 0, 0.2) transparent;
 }

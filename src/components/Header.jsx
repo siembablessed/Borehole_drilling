@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './style/header.css';
+import logo from './images/logo.png'
 
 function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -14,7 +15,7 @@ function Header() {
       <div className="container">
         <div className="logo">
           <Link to="/" onClick={() => setIsOpen(false)}>
-            <h1>Global Investments (Pvt) Ltd</h1>
+            <h1>Global Investments (Pvt) Ltd</h1> 
           </Link>
         </div>
 
