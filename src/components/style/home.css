@@ -227,6 +227,10 @@ body {
   gap: 20px;
   justify-content: center;
   flex-wrap: wrap;
+
+  @media (max-width: 768px) {
+    align-items: center;
+  }
 }
 
 .gallery-item {
