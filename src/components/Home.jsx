@@ -45,7 +45,7 @@ function Home() {
           <div className="carousel-slide">
             <img src={Image3} alt="Solar Pump Installations" />
             <div className="carousel-caption">
-              <h2>Solar Pump Installations</h2>
+              <h2>Pump Installations</h2>
               <p>Eco-friendly solar-powered pumping systems for all needs.</p>
               <Link to="/services" className="cta-button">Explore Services</Link>
             </div>
