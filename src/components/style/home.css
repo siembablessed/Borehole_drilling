@@ -165,6 +165,10 @@ body {
   padding: 20px;
   border-radius: 12px;
   transition: transform 0.3s ease, background 0.3s ease;
+
+  @media (max-width: 768px) {
+      max-width: 300px;
+    }
 }
 
 .mission-vision .mission:hover,
@@ -188,11 +192,18 @@ body {
     .mission{
       img{
         width: 400px;
+        @media (max-width: 768px) {
+            width: 300px;
+          }
       }
     }
     .vision{
       img{
         width: 400px;
+
+        @media (max-width: 768px) {
+          width: 300px;
+        }
       }
     }
   }

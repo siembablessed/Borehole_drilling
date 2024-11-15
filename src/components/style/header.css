@@ -22,6 +22,10 @@
     margin: 0;
     font-size: 1.5em;
     color: #fff;
+
+    @media (max-width: 768px) {
+      font-size: 1em;
+    }
   }
   
   /* Navbar links (desktop view) */
